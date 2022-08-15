@@ -56,7 +56,7 @@ export const DogListContainer = () => {
             <div style={{display: "flex", alignContent: "center", gap: "5px"}}>
                 <span>犬種を選ぶが良い😎　</span>
                 <BreedsSelect breeds={breeds} onChange={changeBreed} value={selectedBreed}/>
-                <button onClick={changeBreedDogsUrl}>取得</button>
+                <button onClick={changeBreedDogsUrl}>表示</button>
             </div>
             <div className="dog-images">
                 {
