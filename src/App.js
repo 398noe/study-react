@@ -5,6 +5,7 @@ import Header from './Header'
 import Description from './Description'
 
 import './App.css'
+import { DogListContainer } from './DogListContainer'
 /**
  * 
  * @type {React.FC}
@@ -14,6 +15,8 @@ export const App = () => {
     <div>
       <Header />
       <Description />
+      <hr />
+      <DogListContainer />
     </div>
   )
 }
