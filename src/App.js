@@ -3,7 +3,6 @@
 import * as React from 'react'
 import { useState } from 'react'
 import './App.css'
-
 /**
  * 
  * @type {React.FC}
@@ -26,11 +25,20 @@ export const App = () => {
 
   return (
     <div>
-      <header>Railway アプリ</header>
-      <p>犬の画像を表示するサイトです。</p>
-      <img src={dogUrl} />
-      <br />
-      <button onClick={() => handleClick()}>更新</button>
+      <header>
+        <h1>
+          Railway アプリ
+        </h1>
+      </header>
+      <main>
+        <div>
+          <p className="description">犬の画像を表示するサイトです。</p>
+          <button onClick={() => handleClick()}>更新</button>
+        </div>
+        <div>
+          <img src={dogUrl} />
+        </div>
+      </main>
     </div>
   )
 }
