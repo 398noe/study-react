@@ -6,6 +6,7 @@ import { BreedsSelect } from "./BreedsSelect";
 
 export const DogListContainer = () => {
     const [breeds, setBreeds] = useState([]);
+    const [selectedBreed, setSelectedBreed] = useState("affenpinscher");
 
     useEffect(() => {
         const exec = async () => {
@@ -18,6 +19,7 @@ export const DogListContainer = () => {
         }
         exec();
     }, []);
+
     const fetchBreedsUrl = async () => {
         return await fetch("https://dog.ceo/api/breeds/list/all")
             .then(res => res.json())
@@ -28,9 +30,14 @@ export const DogListContainer = () => {
             );
     }
 
+    const changeBreed = (e) => {
+        setSelectedBreed(e.target.value);
+    }
+
     return (
         <div className="container">
-            <BreedsSelect breeds={breeds} />
+            {console.log(selectedBreed)}
+            <BreedsSelect breeds={breeds} onChange={changeBreed} value={selectedBreed}/>
         </div>
     );
 }
