@@ -34,3 +34,12 @@ img {
 .description {
     display: inline-block;
 }
+
+.dog-images {
+    margin: 1rem;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
